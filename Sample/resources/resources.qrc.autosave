@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file alias="MY_ICON">qt_logo.svg</file>
+    </qresource>
+</RCC>

@@ -14,6 +14,8 @@ set(source_files
     src/main.cpp
     src/sample_gui.cpp
     src/sample_gui.h
+    src/parametersetter.cpp
+    src/parametersetter.h
 )
 
 set(qt_resource_files
@@ -23,6 +25,7 @@ set(qt_resource_files
 
 set(ui_files
     src/sample_gui.ui
+    src/parametersetter.ui
 )
 
 # compile qt resource files and ui files
@@ -54,8 +57,6 @@ endif(WIN32)
 if(MSVC)
     set_target_properties(${PROJECT_NAME} PROPERTIES COMPILE_FLAGS "/wd4127 /wd4714")
 ENDIF(MSVC)
-
-target_include_directories(${PROJECT_NAME} PRIVATE src)
 
 target_link_options(${PROJECT_NAME} PRIVATE $<$<CXX_COMPILER_ID:MSVC>:/ignore:4098,4099>)
 

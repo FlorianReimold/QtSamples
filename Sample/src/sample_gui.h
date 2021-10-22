@@ -21,6 +21,8 @@
 
 #include "ui_sample_gui.h"
 
+#include "parametersetter.h"
+
 
 class SampleWindow : public QMainWindow
 {
@@ -38,4 +40,6 @@ public:
 ////////////////////////////////////////////
 private:
   Ui::EcalRecMainWindow ui_;
+
+  std::vector<ParameterSetter*> parameter_setters;
 };

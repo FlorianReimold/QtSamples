@@ -23,6 +23,13 @@ SampleWindow::SampleWindow(QWidget *parent)
   : QMainWindow(parent)
 {
   ui_.setupUi(this);
+
+  for (int i = 1; i < 3; i++)
+  {
+    ParameterSetter* setter = new ParameterSetter(this);
+    ui_.verticalLayout_2->addWidget(setter);
+  }
+  connect(ui_.set_text_button, &QPushButton::clicked, this, [this]() { this->ui_.debug_textedit->setText("Hello world");});
 }
 
 SampleWindow::~SampleWindow()

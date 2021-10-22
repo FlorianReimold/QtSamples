@@ -55,8 +55,6 @@ if(MSVC)
     set_target_properties(${PROJECT_NAME} PROPERTIES COMPILE_FLAGS "/wd4127 /wd4714")
 ENDIF(MSVC)
 
-target_include_directories(${PROJECT_NAME} PRIVATE src)
-
 target_link_options(${PROJECT_NAME} PRIVATE $<$<CXX_COMPILER_ID:MSVC>:/ignore:4098,4099>)
 
 if(WIN32)

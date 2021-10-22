@@ -19,8 +19,6 @@
 
 set (qt_windeployqt_cmake_path ${CMAKE_CURRENT_LIST_DIR})
 
-message(STATUS "=================== qt_windeployqt_cmake_path: ${qt_windeployqt_cmake_path}")
-
 # Create convenient function to run windeployqt
 function(qt_add_windeployqt_postbuild arguments)
     # Declare windeployqt as executable target

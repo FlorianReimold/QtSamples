@@ -37,5 +37,5 @@ public:
 // Member variables
 ////////////////////////////////////////////
 private:
-  Ui::EcalRecMainWindow ui_;
+  Ui::SampleMainWindow ui_;
 };
